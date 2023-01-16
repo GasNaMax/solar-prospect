@@ -1,3 +1,7 @@
+---
+import HighlightCards from "./HighlightCards.astro";
+---
+
 <div class='hero-container'>
 	<div class='hero-content'>
 		<h1 class='hero-title'>Welcome to Solar Prospect</h1>
@@ -9,15 +13,11 @@
 		<h2 class='hero-subtitle'>Get your Solars</h2>
 
 		<p class='hero-text'>
-			It takes 3 years in EU for Solars to Return your investment and gain free
-			electricity
+			You can buy 1 Solar for 100 - 200 € and in one year in EU it will generate
+			240-330 € that's crazy ROI get yours while you can
 		</p>
 
-		<div class='hero-highlights'>
-			<div class='hero-highlight'><p>5 year warranty</p></div>
-			<div class='hero-highlight'><p>Free Installment</p></div>
-			<div class='hero-highlight'><p>1000 kWh/year</p></div>
-		</div>
+		<HighlightCards />
 
 		<div class='hero-btns'>
 			<div class='cta-btn'><a href='/shop'>Shop</a></div>
@@ -30,6 +30,11 @@
 	.hero-container {
 		width: 100%;
 		height: calc(100vh - var(--nav-height));
+	}
+
+	.hero-container h1 {
+		font-size: 2rem;
+		font-weight: 700;
 	}
 
 	.hero-content {
@@ -46,42 +51,12 @@
 		margin-bottom: 10px;
 	}
 
-	.hero-highlights {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-	}
-
-	.hero-highlight {
-		padding: 17px 0px;
-		background-color: rgba(47, 46, 46, 0.482);
-		border-radius: 18px;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-right: 0.75rem;
-	}
-	.hero-highlight:last-child {
-		margin-right: 0;
-	}
-
-	.hero-highlight p {
-		text-align: center;
-	}
-
-	.hero-container h1 {
-		font-size: 2rem;
-		font-weight: 700;
-	}
-
 	.hero-btns {
 		display: flex;
 	}
 	.hero-container .cta-btn {
 		margin-top: 0.75rem;
-		margin-left: 1.25rem;
+		margin-right: 1rem;
 	}
 
 	@media screen and (max-width: 630px) {

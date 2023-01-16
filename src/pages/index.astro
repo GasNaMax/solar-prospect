@@ -1,25 +1,19 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import NavBar from "../components/NavBar.astro";
-import Hero from "../components/Hero.astro";
-import HeroBackground from "../components/HeroBackground.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+import Hero from "../components/hero/Hero.astro";
+import HeroBackground from "../components/hero/HeroBackground.astro";
 ---
 
-<!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<NavBar />
+<MainLayout>
+	<section class='home'>
+		<HeroBackground />
+		<Hero />
+	</section>
+</MainLayout>
 
-		<main>
-			<HeroBackground />
-			<Hero />
-		</main>
-
-		<Footer />
-	</body>
-</html>
+<style>
+	.home {
+		width: 100%;
+	}
+</style>

@@ -14,10 +14,18 @@
   --foreground:var(--col-dark);
   --background:var(--col-light);
 
-  --orange:#FDA700;
+  --orange:#F69520;
+  --yellow:#FAD42B;
+  --yellow2:#FDD011;
+
+  --bg-dark:#242537;
+  --bg-dark2:#0E1528;
+  --bg-dark3:#5D2F2F;
+
+  --orange2:#FDA700;
   --green:rgb(165, 251, 94);
-  --yellow1:rgb(255, 244, 42);
-  --yellow2:rgb(255, 251, 10);
+  --yellow3:rgb(255, 244, 42);
+  --yellow4:rgb(255, 251, 10);
 
   --red:rgb(251, 94, 94);
 
@@ -63,29 +71,30 @@ input {
 
 .cta-btn{
   cursor: pointer;
-  background-color: var(--orange);
-  color: var(--col-light);
-  opacity: .7;
+	background: linear-gradient(135deg, var(--yellow), 60%, var(--yellow2));
+  opacity: .8;
 
   font-family: var(--font-secondary);
   font-size: 1.5rem;
   line-height: 1.5rem;
   font-weight: 700;
+  text-shadow: 1px 1px 3px #161616;
 
   padding: 15px 25px;
   width: fit-content;
   border-radius: 26px;
+  box-shadow: 0px 40px 40px 10px rgba(0, 0, 0, 0.378);
 
   transition: all .2s ease-in-out;
 }
 .cta-btn.secondary{
-  background-color: var(--yellow1);
-  color: var(--col-dark);
-  opacity: .5;
+  background: linear-gradient(135deg, var(--yellow2), 30%,var(--orange));
+  opacity: .9;
 }
 .cta-btn:hover{
   scale: 1.1;
   opacity: 1;
+  filter: brightness(1.2);
 }
 .cta-btn:active{
   scale: .9;

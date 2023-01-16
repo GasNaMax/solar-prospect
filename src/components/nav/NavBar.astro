@@ -1,12 +1,10 @@
 ---
+import Logo from "./Logo.astro";
 import NavLink from "./NavLink.astro";
 ---
 
 <nav>
-	<div class='logo-container'>
-		<img class='logo' src='' alt='logo' />
-		<h2 class='logo-text'>SolarProspect</h2>
-	</div>
+	<Logo />
 	<div class='nav-links'>
 		<NavLink href='/'>Home</NavLink>
 		<NavLink href='/blog'>Blog</NavLink>
@@ -30,13 +28,6 @@ import NavLink from "./NavLink.astro";
 		background: linear-gradient(228deg, black, 8%, #0000001a);
 	}
 
-	.logo-container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-right: 40px;
-	}
-
 	.nav-links {
 		padding: 0.25rem 0.5rem;
 		min-width: max-content;
@@ -44,11 +35,5 @@ import NavLink from "./NavLink.astro";
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-	}
-
-	@media screen and (max-width: 630px) {
-		.logo-container {
-			margin-right: 0;
-		}
 	}
 </style>

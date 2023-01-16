@@ -1,0 +1,45 @@
+<div class='highlight-cards'>
+	<div class='highlight-card'><p>5 year warranty</p></div>
+	<div class='highlight-card'><p>Free Installment</p></div>
+	<div class='highlight-card'>
+		<p>1000 kWh/year</p>
+		<p class='special-info-tag'>300 €</p>
+	</div>
+</div>
+
+<style>
+	.highlight-cards {
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.highlight-card {
+		position: relative;
+		padding: 1rem 0.5rem;
+		background-color: rgba(47, 46, 46, 0.682);
+		border-radius: 18px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0.75rem;
+	}
+	.highlight-card:last-child {
+		margin-right: 0;
+	}
+
+	.highlight-card p {
+		text-align: center;
+	}
+
+	.special-info-tag {
+		position: absolute;
+		top: 0%;
+		right: -20%;
+		background: linear-gradient(135deg, var(--yellow), 70%, var(--yellow2));
+		border-radius: 50%;
+		text-shadow: 1px 1px 3px black;
+		padding: 3px 7px;
+	}
+</style>
