@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --col-light:#fefefe;
+  --col-dark: #161616;
+
+  --font:"Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+  sans-serif;
+  --font-secondary:"Cinzel",-apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+  sans-serif;
+
+  --foreground:var(--col-dark);
+  --background:var(--col-light);
+
+  --orange:#FDA700;
+  --green:rgb(165, 251, 94);
+  --yellow1:rgb(255, 244, 42);
+  --yellow2:rgb(255, 251, 10);
+
+  --red:rgb(251, 94, 94);
+
+  --nav-height:50px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+p {
+  color:var(--col-light);
+  font-family: var(--font-secondary);
+}
+p{
+  font-family: var(--font);
+}
+a {
+  color:var(--col-light);
+  font-family: var(--font);
+  text-decoration: none;
+}
+nav a {
+	margin-right: 10px;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+
+.cta-btn{
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--col-light);
+  opacity: .7;
+
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+
+  padding: 15px 25px;
+  width: fit-content;
+  border-radius: 26px;
+
+  transition: all .2s ease-in-out;
+}
+.cta-btn.secondary{
+  background-color: var(--yellow1);
+  color: var(--col-dark);
+  opacity: .5;
+}
+.cta-btn:hover{
+  scale: 1.1;
+  opacity: 1;
+}
+.cta-btn:active{
+  scale: .9;
+}

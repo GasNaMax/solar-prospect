@@ -1,0 +1,36 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+		<style>
+			body {
+				background-color: var(--col-dark);
+			}
+			main {
+				height: calc(100vh - var(--nav-height));
+				height: 100vh;
+				padding-top: var(--nav-height);
+				overflow-y: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<NavBar />
+
+		<main>
+			<slot />
+		</main>
+
+		<Footer />
+	</body>
+</html>

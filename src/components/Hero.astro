@@ -1,0 +1,92 @@
+<div class='hero-container'>
+	<div class='hero-content'>
+		<h1 class='hero-title'>Welcome to Solar Prospect</h1>
+		<p class='hero-text'>
+			We are a company that has mission to make solar cool, affordable, easily
+			obtainable and widely adopted
+		</p>
+
+		<h2 class='hero-subtitle'>Get your Solars</h2>
+
+		<p class='hero-text'>
+			It takes 3 years in EU for Solars to Return your investment and gain free
+			electricity
+		</p>
+
+		<div class='hero-highlights'>
+			<div class='hero-highlight'><p>5 year warranty</p></div>
+			<div class='hero-highlight'><p>Free Installment</p></div>
+			<div class='hero-highlight'><p>1000 kWh/year</p></div>
+		</div>
+
+		<div class='hero-btns'>
+			<div class='cta-btn'><a href='/shop'>Shop</a></div>
+			<div class='cta-btn secondary'><a href='/blog'>Blog</a></div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.hero-container {
+		width: 100%;
+		height: calc(100vh - var(--nav-height));
+	}
+
+	.hero-content {
+		height: 100%;
+		width: 50vw;
+		padding: 10px 40px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+	.hero-content > * {
+		margin-bottom: 10px;
+	}
+
+	.hero-highlights {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.hero-highlight {
+		padding: 17px 0px;
+		background-color: rgba(47, 46, 46, 0.482);
+		border-radius: 18px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0.75rem;
+	}
+	.hero-highlight:last-child {
+		margin-right: 0;
+	}
+
+	.hero-highlight p {
+		text-align: center;
+	}
+
+	.hero-container h1 {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+
+	.hero-btns {
+		display: flex;
+	}
+	.hero-container .cta-btn {
+		margin-top: 0.75rem;
+		margin-left: 1.25rem;
+	}
+
+	@media screen and (max-width: 630px) {
+		.hero-content {
+			width: 100%;
+		}
+	}
+</style>
