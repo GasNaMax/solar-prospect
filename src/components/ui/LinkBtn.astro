@@ -21,8 +21,9 @@ const {
 <style>
 	.link-btn {
 		cursor: pointer;
-		background: linear-gradient(135deg, var(--yellow), 60%, var(--yellow2));
-		opacity: 0.8;
+		background: linear-gradient(135deg, var(--yellow2), 30%, var(--orange2));
+
+		opacity: 0.9;
 
 		font-family: var(--font-secondary);
 		font-size: 1.5rem;
@@ -37,7 +38,7 @@ const {
 		border-radius: 26px;
 		box-shadow: 0px 40px 40px 10px rgba(0, 0, 0, 0.378);
 
-		transition: all 0.2s ease-in-out;
+		transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		margin-right: 1.5rem;
 	}
 	.link-btn:last-of-type {
@@ -49,7 +50,7 @@ const {
 		padding: 15px 25px;
 	}
 	.link-btn.secondary {
-		background: linear-gradient(135deg, var(--yellow2), 30%, var(--orange));
+		background: linear-gradient(135deg, var(--orange2), 40%, var(--red2));
 		opacity: 0.9;
 	}
 	.link-btn:hover {
