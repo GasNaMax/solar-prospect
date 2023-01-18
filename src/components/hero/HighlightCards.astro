@@ -1,10 +1,33 @@
+---
+const cards = [
+	{
+		value: "5 year warranty",
+	},
+	{
+		value: "Free Installment",
+	},
+	{
+		value: "1000 kWh/year",
+		special: {
+			active: true,
+			value: "300 €",
+		},
+	},
+];
+---
+
 <div class='highlight-cards'>
-	<div class='highlight-card'><p>5 year warranty</p></div>
-	<div class='highlight-card'><p>Free Installment</p></div>
-	<div class='highlight-card'>
-		<p>1000 kWh/year</p>
-		<p class='special-info-tag'>300 €</p>
-	</div>
+	{
+		cards.map(card => (
+			<div class='highlight-card'>
+				<p>{card.value}</p>
+
+				{card?.special?.active ? (
+					<p class='special-info-tag'>{card.special?.value}</p>
+				) : null}
+			</div>
+		))
+	}
 </div>
 
 <style>
@@ -35,11 +58,25 @@
 
 	.special-info-tag {
 		position: absolute;
-		top: 0%;
+		top: -10%;
 		right: -20%;
 		background: linear-gradient(135deg, var(--yellow), 70%, var(--yellow2));
 		border-radius: 50%;
 		text-shadow: 1px 1px 3px black;
 		padding: 3px 7px;
+	}
+
+	@media screen and (max-width: 400px) {
+		.highlight-cards {
+			margin-left: -6%;
+		}
+		.highlight-card {
+			padding: 0.25rem 0.25rem;
+		}
+		.special-info-tag {
+			top: -25%;
+			right: -25%;
+			padding: 2px 3px;
+		}
 	}
 </style>

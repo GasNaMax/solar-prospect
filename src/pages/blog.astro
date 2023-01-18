@@ -65,6 +65,36 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 		justify-content: center;
 	}
 
+	@media screen and (max-width: 770px) {
+		.blog-post-card {
+			aspect-ratio: 0.6;
+		}
+	}
+	@media screen and (max-width: 650px) {
+		.blog-post-card {
+			aspect-ratio: 0.4;
+		}
+	}
+
+	@media screen and (min-width: 1100px) {
+		.blog-post-card {
+			aspect-ratio: 0.6;
+		}
+		.blog-section {
+			width: 55%;
+		}
+	}
+	@media screen and (min-width: 1100px) {
+		.blog-post-card {
+			aspect-ratio: 0.7;
+		}
+	}
+	@media screen and (min-width: 1700px) {
+		.blog-post-card {
+			aspect-ratio: 1.2;
+		}
+	}
+
 	.blog-post-card a {
 		height: 100%;
 		display: flex;

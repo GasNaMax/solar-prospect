@@ -1,13 +1,18 @@
 ---
+import LinkBtn from "../ui/LinkBtn.astro";
 import HighlightCards from "./HighlightCards.astro";
 ---
 
 <div class='hero-container'>
 	<div class='hero-content'>
-		<h1 class='hero-title'>Welcome to Solar Prospect</h1>
+		<h1 class='hero-title'>Welcome Solar Prospector!</h1>
 		<p class='hero-text'>
-			We are a company that has mission to make solar cool, affordable, easily
-			obtainable and widely adopted
+			Our mission is to make solar cool, affordable, easily obtainable and
+			widely adopted
+		</p>
+		<p class='hero-text'>
+			If you want to make world a better place, get clean energy or earn some
+			money, you came to the right place.
 		</p>
 
 		<h2 class='hero-subtitle'>Get your Solars</h2>
@@ -20,8 +25,8 @@ import HighlightCards from "./HighlightCards.astro";
 		<HighlightCards />
 
 		<div class='hero-btns'>
-			<div class='cta-btn'><a href='/shop'>Shop</a></div>
-			<div class='cta-btn secondary'><a href='/blog'>Blog</a></div>
+			<LinkBtn href='/shop' value='Shop' />
+			<LinkBtn href='/blog' value='Blog' />
 		</div>
 	</div>
 </div>
@@ -30,11 +35,6 @@ import HighlightCards from "./HighlightCards.astro";
 	.hero-container {
 		width: 100%;
 		height: calc(100vh - var(--nav-height));
-	}
-
-	.hero-container h1 {
-		font-size: 2rem;
-		font-weight: 700;
 	}
 
 	.hero-content {
@@ -51,17 +51,38 @@ import HighlightCards from "./HighlightCards.astro";
 		margin-bottom: 10px;
 	}
 
-	.hero-btns {
-		display: flex;
+	.hero-title {
+		font-size: 2rem;
+		font-weight: 700;
+		text-shadow: -2px -3px 7px rgb(0 0 0 / 52%);
 	}
-	.hero-container .cta-btn {
-		margin-top: 0.75rem;
-		margin-right: 1rem;
+
+	.hero-text {
+		max-width: 400px;
+		font-size: 1.25rem;
+		text-shadow: 1px 1px 2px black;
+	}
+
+	.hero-btns {
+		height: 52px;
+		display: flex;
+		margin-top: 1rem;
 	}
 
 	@media screen and (max-width: 630px) {
 		.hero-content {
 			width: 100%;
+		}
+	}
+	@media screen and (max-width: 800px) {
+		.hero-text {
+			font-size: 1rem;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		.hero-content {
+			margin-left: 10%;
 		}
 	}
 </style>
