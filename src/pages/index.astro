@@ -3,12 +3,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 import Hero from "../components/hero/Hero.astro";
 import HeroBackground from "../components/hero/HeroBackground.astro";
+import ROICalc from "../components/calc/ROICalc.svelte";
 ---
 
 <MainLayout>
 	<section class='home'>
 		<HeroBackground />
 		<Hero />
+		<ROICalc client:load />
 	</section>
 </MainLayout>
 

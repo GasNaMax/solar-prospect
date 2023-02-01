@@ -52,7 +52,9 @@ p {
   color:var(--col-light);
   font-family: var(--font-secondary);
 }
-p{
+p,
+label,
+input{
   font-family: var(--font);
 }
 a {
