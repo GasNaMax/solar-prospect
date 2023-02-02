@@ -1,14 +1,16 @@
 ---
 import Logo from "./Logo.astro";
 import NavLink from "./NavLink.astro";
+import CartLink from "./CartLink.astro";
 ---
 
-<nav>
+<nav data-turbo-permanent id='nav-bar'>
 	<Logo />
 	<div class='nav-links'>
-		<NavLink href='/'>Home</NavLink>
+		<NavLink href='/shop'>Shop</NavLink>
 		<NavLink href='/blog'>Blog</NavLink>
 		<NavLink href='/about'>About</NavLink>
+		<CartLink />
 	</div>
 </nav>
 
@@ -25,7 +27,7 @@ import NavLink from "./NavLink.astro";
 		align-items: center;
 		justify-content: center;
 
-		background: linear-gradient(228deg, black, 8%, #0000001a);
+		background: linear-gradient(228deg, rgba(0, 0, 0, 0.696), 18%, #000000a4);
 	}
 
 	.nav-links {

@@ -1,0 +1,17 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Products from "../../components/shop/Products.svelte";
+---
+
+<MainLayout>
+	<section class='shop-container'>
+		<Products client:load />
+	</section>
+</MainLayout>
+
+<style>
+	.shop-container {
+		width: 80%;
+		margin: 0 auto;
+	}
+</style>

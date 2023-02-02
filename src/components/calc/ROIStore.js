@@ -30,7 +30,6 @@ export function calculateROIInYears() {
 	const { panelCount, panelPrice, generation, elPrice, priceGrowth } =
 		get(ROICalcState);
 
-	console.log(panelCount, panelPrice, generation, elPrice, priceGrowth);
 	const areaNeeded = 10 * panelCount;
 	const cost = (panelPrice * panelCount).toFixed(1);
 	const totalYearGeneration = generation * panelCount;

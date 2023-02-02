@@ -1,0 +1,26 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Cart from "../../components/shop/Cart.svelte";
+import Checkout from "../../components/shop/Checkout.svelte";
+---
+
+<MainLayout>
+	<div class='cart-container'>
+		<div class='cart-side'>
+			<h1>Shopping Cart</h1>
+			<Cart client:idle />
+		</div>
+		<div class='checkout-side'>
+			<Checkout client:idle />
+		</div>
+	</div>
+</MainLayout>
+
+<style>
+	.cart-container {
+		height: calc(100vh - 135px);
+		width: 90%;
+		margin: auto;
+		padding-top: 1rem;
+	}
+</style>

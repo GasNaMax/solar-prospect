@@ -6,9 +6,6 @@
 	import LinkBtn from "../ui/LinkBtn.svelte";
 
 	const handleSubmit = e => {
-		console.log("handleSUbmit");
-		console.log($ROICalcState);
-		// e.preventDefault();
 		calculateROIInYears();
 	};
 
